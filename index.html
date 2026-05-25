@@ -491,12 +491,27 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent); backgro
 </div>
 
 <div class="filters" style="margin-top:8px;">
-  <button class="chip-classe active" onclick="setClasse('tutte',this)">Tutte le classi</button>
-  <button class="chip-classe" onclick="setClasse('1°',this)">1ª</button>
-  <button class="chip-classe" onclick="setClasse('2°',this)">2ª</button>
-  <button class="chip-classe" onclick="setClasse('3°',this)">3ª</button>
-  <button class="chip-classe" onclick="setClasse('4°',this)">4ª</button>
-  <button class="chip-classe" onclick="setClasse('5°',this)">5ª</button>
+  <button class="chip-classe active" onclick="setClasse('tutte',this)">Tutte</button>
+  <button class="chip-classe" onclick="setClasse('I Archimede',this)">I Archimede</button>
+  <button class="chip-classe" onclick="setClasse('I Euripide',this)">I Euripide</button>
+  <button class="chip-classe" onclick="setClasse('I Erodoto',this)">I Erodoto</button>
+  <button class="chip-classe" onclick="setClasse('I Pitagora',this)">I Pitagora</button>
+  <button class="chip-classe" onclick="setClasse('II Archimede',this)">II Archimede</button>
+  <button class="chip-classe" onclick="setClasse('II Euripide',this)">II Euripide</button>
+  <button class="chip-classe" onclick="setClasse('II Erodoto',this)">II Erodoto</button>
+  <button class="chip-classe" onclick="setClasse('II Pitagora',this)">II Pitagora</button>
+  <button class="chip-classe" onclick="setClasse('III Archimede',this)">III Archimede</button>
+  <button class="chip-classe" onclick="setClasse('III Euripide',this)">III Euripide</button>
+  <button class="chip-classe" onclick="setClasse('III Erodoto',this)">III Erodoto</button>
+  <button class="chip-classe" onclick="setClasse('III Pitagora',this)">III Pitagora</button>
+  <button class="chip-classe" onclick="setClasse('IV Archimede',this)">IV Archimede</button>
+  <button class="chip-classe" onclick="setClasse('IV Euripide',this)">IV Euripide</button>
+  <button class="chip-classe" onclick="setClasse('IV Erodoto',this)">IV Erodoto</button>
+  <button class="chip-classe" onclick="setClasse('IV Pitagora',this)">IV Pitagora</button>
+  <button class="chip-classe" onclick="setClasse('V Archimede',this)">V Archimede</button>
+  <button class="chip-classe" onclick="setClasse('V Euripide',this)">V Euripide</button>
+  <button class="chip-classe" onclick="setClasse('V Erodoto',this)">V Erodoto</button>
+  <button class="chip-classe" onclick="setClasse('V Pitagora',this)">V Pitagora</button>
 </div>
 
 <!-- BANNER ADOZIONI -->
@@ -537,7 +552,15 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent); backgro
       <label class="form-label">Classe *</label>
       <select id="ad-classe">
         <option value="">Scegli...</option>
-        <option>1°</option><option>2°</option><option>3°</option><option>4°</option><option>5°</option>
+        <optgroup label="Ginnasio">
+        <option>I Archimede</option><option>I Euripide</option><option>I Erodoto</option><option>I Pitagora</option>
+        <option>II Archimede</option><option>II Euripide</option><option>II Erodoto</option><option>II Pitagora</option>
+        </optgroup>
+        <optgroup label="Liceo">
+        <option>III Archimede</option><option>III Euripide</option><option>III Erodoto</option><option>III Pitagora</option>
+        <option>IV Archimede</option><option>IV Euripide</option><option>IV Erodoto</option><option>IV Pitagora</option>
+        <option>V Archimede</option><option>V Euripide</option><option>V Erodoto</option><option>V Pitagora</option>
+        </optgroup>
       </select>
     </div>
     <div class="form-group">
@@ -581,7 +604,15 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent); backgro
         <label class="form-label">Classe</label>
         <select id="f-classe">
           <option value="">Scegli...</option>
-          <option>1°</option><option>2°</option><option>3°</option><option>4°</option><option>5°</option>
+          <optgroup label="Ginnasio">
+          <option>I Archimede</option><option>I Euripide</option><option>I Erodoto</option><option>I Pitagora</option>
+          <option>II Archimede</option><option>II Euripide</option><option>II Erodoto</option><option>II Pitagora</option>
+          </optgroup>
+          <optgroup label="Liceo">
+          <option>III Archimede</option><option>III Euripide</option><option>III Erodoto</option><option>III Pitagora</option>
+          <option>IV Archimede</option><option>IV Euripide</option><option>IV Erodoto</option><option>IV Pitagora</option>
+          <option>V Archimede</option><option>V Euripide</option><option>V Erodoto</option><option>V Pitagora</option>
+          </optgroup>
         </select>
       </div>
     </div>
@@ -863,7 +894,7 @@ function renderList(list) {
         <div class="book-tags">
           <span class="tag ${condClass}">${b.condizione||'—'}</span>
           ${b.materia ? `<span class="tag tag-materia">${b.materia}</span>` : ''}
-          ${b.classe ? `<span class="tag tag-classe">${b.classe} sup.</span>` : ''}
+          ${b.classe ? `<span class="tag tag-classe">${b.classe}</span>` : ''}
           ${prenotatoBadge}
         </div>
         <div class="book-footer">
